@@ -13,10 +13,11 @@ python3 main.py
 ```
 
 Writes the review line to `/output/entry.txt`.
+`LINE` in `main.py` is the single source of truth for that review text.
 
 ## Line
 
-> A doorstop spends its whole life holding open opportunities it will never walk through.
+> A doorstop's finest hour is flat on the floor, holding open a life it never enters.
 
 ---
 
