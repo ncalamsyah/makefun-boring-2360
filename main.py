@@ -3,16 +3,18 @@
 
 from pathlib import Path
 
-LINE = "A doorstop's entire career is waiting for a door that never asks it to stay."
+PATH = Path("/output/entry.txt")
+LINE = (
+    "A doorstop spends its whole life holding open opportunities it will never walk through."
+)
 
 
 def main() -> None:
-    """Validate LINE and write it (and only it) to /output/entry.txt."""
+    """Validate LINE and write it (and only it) to PATH."""
     assert 1 <= len(LINE) <= 200, "LINE must be 1..200 chars"
     assert "\n" not in LINE, "LINE must not contain a newline"
-    out = Path("/output")
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "entry.txt").write_text(LINE, encoding="utf-8")
+    PATH.parent.mkdir(parents=True, exist_ok=True)
+    PATH.write_text(LINE, encoding="utf-8")
 
 
 if __name__ == "__main__":
